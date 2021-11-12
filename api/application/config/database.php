@@ -77,15 +77,17 @@ $db['default'] = array(
 	'dsn'	=> '',
 	
 	
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'news_app',
-
 	// 'hostname' => 'localhost',
-	// 'username' => 'fricypby_api_account',
-	// 'password' => '&)9Szyupd^n-',
-	// 'database' => 'fricypby_v2_1',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'news_app',
+
+	// 'mysql://bc2b081e14412e:f93b6393@us-cdbr-east-04.cleardb.com/heroku_929c655e0f8d398?reconnect=true'
+
+	'hostname' => 'us-cdbr-east-04.cleardb.com',
+	'username' => 'bc2b081e14412e',
+	'password' => 'f93b6393',
+	'database' => 'heroku_929c655e0f8d398',
 	
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

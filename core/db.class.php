@@ -1,9 +1,14 @@
 <?php
     class DB {
-        public $host = 'localhost';
-        public $dbname = 'news_app';
-        public $password = '';
-        public $username = 'root';
+        public $host = 'us-cdbr-east-04.cleardb.com';
+        public $dbname = 'heroku_929c655e0f8d398';
+        public $password = 'f93b6393';
+        public $username = 'bc2b081e14412e';
+
+    //     'hostname' => 'us-cdbr-east-04.cleardb.com',
+    // 'username' => 'bc2b081e14412e',
+    // 'password' => 'f93b6393',
+    // 'database' => 'heroku_929c655e0f8d398',
         
         public $conn;
 

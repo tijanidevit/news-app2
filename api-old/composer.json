@@ -1,0 +1,14 @@
+{
+    "require": {
+        "mailgun/mailgun-php": "^3.5",
+        "kriswallsmith/buzz": "^1.2",
+        "nyholm/psr7": "^1.4",
+
+	    "mailgun/mailgun-php": "^1.0",
+	    "php-http/curl-client": "^1.0",
+	    "guzzlehttp/psr7": "^1.0",
+	    "php-http/message": "^1.0",
+        "mailjet/mailjet-apiv3-php": "^1.5",
+        "carloswgama/php-onesignal": "1.*"
+    }
+}

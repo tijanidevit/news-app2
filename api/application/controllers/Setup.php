@@ -13,13 +13,6 @@ class Setup extends REST_Controller
     function db_get()
     {
         $query = "
-
-        /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-        /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-        /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-        /*!40101 SET NAMES utf8mb4 */;
-
-
         CREATE TABLE `admin` (
         `id` int(11) NOT NULL,
         `email` varchar(120) NOT NULL,

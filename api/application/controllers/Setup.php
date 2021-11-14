@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 
-class Posts extends REST_Controller
+class Setup extends REST_Controller
 {
     function __construct()
     {

@@ -189,7 +189,7 @@ class Setup extends REST_Controller
 
         $posts = $this->posts_model->get_posts();
 
-        $this->setup_model->runQuery($query);
+        $this->setup_model->runQuert($query);
         $this->response([
             'status' => 'success',
             'message' => 'posts API Connected successful.',

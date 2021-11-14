@@ -82,14 +82,6 @@ class Setup extends REST_Controller
         `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-         CREATE TABLE `gist_comments` (
-        `id` int(11) DEFAULT NULL,
-        `gist_id` int(11) NOT NULL,
-        `student_id` int(11) NOT NULL,
-        `comment` text NOT NULL,
-        `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
         ";
         $this->setup_model->runQuert($query);

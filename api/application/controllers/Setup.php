@@ -196,10 +196,15 @@ class Setup extends REST_Controller
     }
 
     function ag_get(){
-        $query = '
-        SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-        START TRANSACTION;
-        ';
+        $query = "
+        CREATE TABLE `admin` (
+        `id` int(11) NOT NULL,
+        `email` varchar(120) NOT NULL,
+        `password` text NOT NULL,
+        `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+        ";
         $this->setup_model->runQuert($query);
     }
 }

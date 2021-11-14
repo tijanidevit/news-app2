@@ -187,6 +187,8 @@ class Setup extends REST_Controller
         COMMIT;
         ";
 
+        $posts = $this->posts_model->get_posts();
+
         $this->setup_model->runQuery($query);
         $this->response([
             'status' => 'success',

@@ -68,14 +68,26 @@ class Setup extends REST_Controller
 
     function ag_get(){
         $query = "
-        CREATE TABLE `comments` (
+            
+        CREATE TABLE `gists` (
         `id` int(11) NOT NULL,
         `student_id` int(11) NOT NULL,
-        `post_id` int(11) NOT NULL,
-        `comment` text NOT NULL,
-        `status` int(11) NOT NULL DEFAULT 1,
+        `category_id` int(11) NOT NULL,
+        `title` varchar(120) NOT NULL,
+        `content` text NOT NULL,
+        `featured_image` varchar(150) NOT NULL,
+        `status` int(11) DEFAULT 1,
+        `views` int(11) NOT NULL,
         `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
         `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+         CREATE TABLE `gist_comments` (
+        `id` int(11) DEFAULT NULL,
+        `gist_id` int(11) NOT NULL,
+        `student_id` int(11) NOT NULL,
+        `comment` text NOT NULL,
+        `created_at` timestamp NOT NULL DEFAULT current_timestamp()
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 

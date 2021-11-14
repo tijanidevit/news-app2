@@ -13,20 +13,6 @@ class Setup extends REST_Controller
     function db_get()
     {
         $query = "
-
-        /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-        /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-        /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-        /*!40101 SET NAMES utf8mb4 */;
-
-
-        CREATE TABLE `admin` (
-        `id` int(11) NOT NULL,
-        `email` varchar(120) NOT NULL,
-        `password` text NOT NULL,
-        `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
         INSERT INTO `admin` (`id`, `email`, `password`, `created_at`) VALUES
         (1, 'admin@news.com', '39d5b40ca6272059833743b327220089', '2021-10-20 05:50:58');
 

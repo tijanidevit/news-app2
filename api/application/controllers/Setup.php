@@ -95,7 +95,7 @@ class Setup extends REST_Controller
 
 
 
-    function db3_get()
+    function db3b_get()
     {
         $query = "
 
@@ -120,7 +120,7 @@ class Setup extends REST_Controller
 
 
 
-    function dba_get()
+    function db3a_get()
     {
         $query = "
 

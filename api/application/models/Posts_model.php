@@ -79,7 +79,7 @@ class posts_model extends CI_Model
 
         if ($post_comments) {
             foreach ($post_comments as $post_comment) {
-                if ($post_comment->sender == 'Admin' || $post_comment->sender == 'admin' || $post_comment->sender == null || is_null($post_comment->sender) || empty($post_comment->sender)) {
+                if ($post_comment->sender == 'Admin' || $post_comment->sender == 'admin' || $post_comment->sender == 'null' || is_null($post_comment->sender) || empty($post_comment->sender)) {
                     $post_comment->user = 'Admin';
                 }
                 else{

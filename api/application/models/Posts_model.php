@@ -79,7 +79,7 @@ class posts_model extends CI_Model
 
         if ($post_comments) {
             foreach ($post_comments as $post_comment) {
-                if (is_int($post_comment->sender)) {
+                if (! is_int($post_comment->sender)) {
                     $post_comment->user = 'Admin';
                 }
                 else{

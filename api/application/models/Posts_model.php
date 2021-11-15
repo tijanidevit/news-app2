@@ -83,7 +83,10 @@ class posts_model extends CI_Model
                     $post_comment->user = 'Admin';
                 }
                 else{
+                    // return $this->fn_model->get_student_via_id($post_comment->sender)['fullname'];
                     $post_comment->user = $this->fn_model->get_student_via_id($post_comment->sender)['fullname'];
+
+                    // return $post_comment->user;
                 }
             }
             return $post_comments;

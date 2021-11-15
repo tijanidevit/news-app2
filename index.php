@@ -1,1 +1,1 @@
-<a href="admin">Admin</a>
+<a href="admin">Admin </a>

@@ -98,8 +98,6 @@ class Setup extends REST_Controller
         INSERT INTO `levels` (`id`, `level`) VALUES
         (1, 'ND1'),
         (2, 'ND2');
-        (3, 'HND1');
-        (4, 'HND2');
 
         ";
 

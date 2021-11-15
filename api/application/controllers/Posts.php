@@ -78,7 +78,7 @@ class Posts extends REST_Controller
             ], $this->status_code['badRequest']);
         }
         $comment_data = array(
-            'id' => time() - 100000;
+            'id' => time() - 100000,
             'sender' => $this->input->post('student_id'),
             'post_id' => $this->input->post('post_id'),
             'comment' => $this->input->post('comment'),

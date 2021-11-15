@@ -291,17 +291,17 @@ class Setup extends REST_Controller
     }
 
 
-    // function og1_get(){
-    //     $query = "
+    function og1_get(){
+        $query = "
 
-    //     ALTER TABLE `posts`
-    //     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+        ALTER TABLE `posts`
+        MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
-    //     ALTER TABLE `students`
-    //     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-    //     ";
-    //     $this->setup_model->runQuert($query);
-    // }
+        ALTER TABLE `students`
+        MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+        ";
+        $this->setup_model->runQuert($query);
+    }
 
 
     function og2_get(){

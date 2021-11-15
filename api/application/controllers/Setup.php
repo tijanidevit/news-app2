@@ -29,7 +29,14 @@ class Setup extends REST_Controller
     }
 
     function cs_get(){
-        $query = "CREATE TABLE `post_comments` ( `id` INT NOT NULL AUTO_INCREMENT , `post_id` INT NOT NULL , `sender` VARCHAR NOT NULL , `comment` TEXT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+        $query = "CREATE TABLE post_comments (
+            `id` INT NOT NULL AUTO_INCREMENT , 
+            `post_id` INT NOT NULL , 
+            `sender` VARCHAR NOT NULL , 
+            `comment` TEXT NOT NULL , 
+            `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+            `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+            PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 
         $this->setup_model->runQuert($query);
         $this->response([

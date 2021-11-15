@@ -28,6 +28,18 @@ class Setup extends REST_Controller
         ], REST_Controller::HTTP_OK);
     }
 
+    function cs_get(){
+        $query = "CREATE TABLE `post_comments` ( `id` INT NOT NULL AUTO_INCREMENT , `post_id` INT NOT NULL , `sender` VARCHAR NOT NULL , `comment` TEXT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+
+        $this->setup_model->runQuert($query);
+        $this->response([
+            'status' => 'success',
+            'message' => 'posts API Connected successful.',
+            'time_connected' => date('d-M-Y h:i:s'),
+            'domain' => base_url()
+        ], REST_Controller::HTTP_OK);
+
+    }
     function db1_get()
     {
         $query = "

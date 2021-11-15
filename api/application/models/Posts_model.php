@@ -80,10 +80,10 @@ class posts_model extends CI_Model
         if ($post_comments) {
             foreach ($post_comments as $post_comment) {
                 if ($post_comment->sender == 'Admin') {
-                    $post_comment->commented_by = 'Admin';
+                    $post_comment->user = 'Admin';
                 }
                 else{
-                    $post_comment->commented_by = $this->fn_model->get_student_via_id($post_comment->sender)['fullname'];
+                    $post_comment->user = $this->fn_model->get_student_via_id($post_comment->sender)['fullname'];
                 }
             }
             return $post_comments;

@@ -34,10 +34,6 @@ class Setup extends REST_Controller
         INSERT INTO `categories` (`id`, `category`, `created_at`, `updated_at`) VALUES
         (1, 'Project', '2021-10-20 11:49:42', '2021-10-20 11:49:42'),
         (2, 'Seminar', '2021-10-20 11:49:42', '2021-10-20 11:49:42');
-        (3, 'Sports', '2021-10-20 11:49:42', '2021-10-20 11:49:42');
-        (4, 'Programming', '2021-10-20 11:49:42', '2021-10-20 11:49:42');
-        (5, 'Assignment', '2021-10-20 11:49:42', '2021-10-20 11:49:42');
-        (6, 'Others', '2021-10-20 11:49:42', '2021-10-20 11:49:42');
         ";
 
         // $posts = $this->posts_model->get_posts();

@@ -76,13 +76,27 @@ class Setup extends REST_Controller
         `created_at` timestamp NOT NULL DEFAULT current_timestamp()
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    function agb_get(){
+        $query = "
         CREATE TABLE `levels` (
         `id` int(11) NOT NULL,
         `level` varchar(120) NOT NULL
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-        
+        ";
+        $this->setup_model->runQuert($query);
+    }
 
+
+
+    function ag1_get(){
+        $query = "
+        
         CREATE TABLE `posts` (
         `id` int(11) NOT NULL,
         `category_id` int(11) NOT NULL,
@@ -94,8 +108,15 @@ class Setup extends REST_Controller
         `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
         `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        ";
+        $this->setup_model->runQuert($query);
+    }
 
-        
+
+
+    function ag2_get(){
+        $query = "
+                
         CREATE TABLE `students` (
         `id` int(11) NOT NULL,
         `matric_no` varchar(20) NOT NULL,
@@ -110,49 +131,204 @@ class Setup extends REST_Controller
         `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+
+    function ag3_get(){
+        $query = "
+
 
         ALTER TABLE `admin`
         ADD PRIMARY KEY (`id`);
+        ";
+        $this->setup_model->runQuert($query);
+    }
 
+
+    function ag4_get(){
+        $query = "
         ALTER TABLE `categories`
         ADD PRIMARY KEY (`id`);
 
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    function ag5_get(){
+        $query = "
         ALTER TABLE `gists`
         ADD PRIMARY KEY (`id`);
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    function ag6_get(){
+        $query = "
 
         ALTER TABLE `gist_likes`
         ADD PRIMARY KEY (`id`);
+        ";
+        $this->setup_model->runQuert($query);
+    }
 
+
+
+    function ag7_get(){
+        $query = "
+        
         ALTER TABLE `levels`
         ADD PRIMARY KEY (`id`);
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+
+    function ag8_get(){
+        $query = "
+    
 
         ALTER TABLE `posts`
         ADD PRIMARY KEY (`id`);
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+
+    function ag9_get(){
+        $query = "
 
         ALTER TABLE `students`
         ADD PRIMARY KEY (`id`);
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+
+    function ag10_get(){
+        $query = "
 
         ALTER TABLE `admin`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+
+    function ag11_get(){
+        $query = "
+
         ALTER TABLE `categories`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+    function ag12_get(){
+        $query = "
 
         ALTER TABLE `gists`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+    function ag13_get(){
+        $query = "
 
         ALTER TABLE `gist_likes`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+    function ag14_get(){
+        $query = "
 
         ALTER TABLE `levels`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+    function ag15_get(){
+        $query = "
+
         ALTER TABLE `posts`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    function ag16_get(){
+        $query = "
 
         ALTER TABLE `students`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
         ";
         $this->setup_model->runQuert($query);
     }
+
+
+    function og_get(){
+        $query = "
+
+        ALTER TABLE `levels`
+        MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    // function og1_get(){
+    //     $query = "
+
+    //     ALTER TABLE `posts`
+    //     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+    //     ALTER TABLE `students`
+    //     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+    //     ";
+    //     $this->setup_model->runQuert($query);
+    // }
+
+
+    function og2_get(){
+        $query = "
+
+        ALTER TABLE `posts`
+        MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    function og3_get(){
+        $query = "
+
+        ALTER TABLE `students`
+        MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
+
+    function og4_get(){
+        $query = "
+        COMMIT
+        ";
+        $this->setup_model->runQuert($query);
+    }
+
 }

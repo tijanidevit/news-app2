@@ -29,14 +29,15 @@ class Setup extends REST_Controller
     }
 
     function cs_get(){
-        $query = "CREATE TABLE post_comments (
-            `id` INT NOT NULL AUTO_INCREMENT , 
-            `post_id` INT NOT NULL , 
-            `sender` VARCHAR NOT NULL , 
-            `comment` TEXT NOT NULL , 
-            `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
-            `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
-            PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+        $query = "CREATE TABLE `post_comments` (
+          `id` int(11) NOT NULL,
+          `post_id` int(11) NOT NULL,
+          `sender` varchar(120) NOT NULL,
+          `comment` text NOT NULL,
+          `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+          `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        ";
 
         $this->setup_model->runQuert($query);
         $this->response([
@@ -206,11 +207,11 @@ class Setup extends REST_Controller
         $query = "
         
         CREATE TABLE `gist_likes` (
-        `id` int(11) NOT NULL,
-        `gist_id` int(11) NOT NULL,
-        `student_id` int(11) NOT NULL,
-        `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            `id` int(11) NOT NULL,
+            `gist_id` int(11) NOT NULL,
+            `student_id` int(11) NOT NULL,
+            `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
         ";
         $this->setup_model->runQuert($query);
@@ -220,9 +221,9 @@ class Setup extends REST_Controller
     function agb_get(){
         $query = "
         CREATE TABLE `levels` (
-        `id` int(11) NOT NULL,
-        `level` varchar(120) NOT NULL
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            `id` int(11) NOT NULL,
+            `level` varchar(120) NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
         ";
         $this->setup_model->runQuert($query);
@@ -234,16 +235,16 @@ class Setup extends REST_Controller
         $query = "
         
         CREATE TABLE `posts` (
-        `id` int(11) NOT NULL,
-        `category_id` int(11) NOT NULL,
-        `title` varchar(120) NOT NULL,
-        `content` text NOT NULL,
-        `featured_image` varchar(120) NOT NULL,
-        `views` int(11) NOT NULL DEFAULT 0,
-        `status` int(11) NOT NULL DEFAULT 1,
-        `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-        `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            `id` int(11) NOT NULL,
+            `category_id` int(11) NOT NULL,
+            `title` varchar(120) NOT NULL,
+            `content` text NOT NULL,
+            `featured_image` varchar(120) NOT NULL,
+            `views` int(11) NOT NULL DEFAULT 0,
+            `status` int(11) NOT NULL DEFAULT 1,
+            `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+            `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         ";
         $this->setup_model->runQuert($query);
     }
@@ -252,20 +253,20 @@ class Setup extends REST_Controller
 
     function ag2_get(){
         $query = "
-                
+        
         CREATE TABLE `students` (
-        `id` int(11) NOT NULL,
-        `matric_no` varchar(20) NOT NULL,
-        `level_id` int(11) NOT NULL,
-        `fullname` varchar(120) NOT NULL,
-        `email` varchar(120) NOT NULL,
-        `image` varchar(120) NOT NULL,
-        `gender` varchar(1) NOT NULL,
-        `password` text NOT NULL,
-        `status` int(11) NOT NULL DEFAULT 1,
-        `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-        `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            `id` int(11) NOT NULL,
+            `matric_no` varchar(20) NOT NULL,
+            `level_id` int(11) NOT NULL,
+            `fullname` varchar(120) NOT NULL,
+            `email` varchar(120) NOT NULL,
+            `image` varchar(120) NOT NULL,
+            `gender` varchar(1) NOT NULL,
+            `password` text NOT NULL,
+            `status` int(11) NOT NULL DEFAULT 1,
+            `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+            `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
         ";
         $this->setup_model->runQuert($query);
@@ -327,7 +328,7 @@ class Setup extends REST_Controller
 
     function ag8_get(){
         $query = "
-    
+        
 
         ALTER TABLE `posts`
         ADD PRIMARY KEY (`id`);
